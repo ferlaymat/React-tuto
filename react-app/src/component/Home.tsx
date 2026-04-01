@@ -13,13 +13,21 @@ function Home() {
   };
 
   //we prepare the different redirections
-  const navP1 = useNavigate();
-  const navP2 = useNavigate();
+  const nav = useNavigate();
   const toP1 = () => {
-    navP1("/page1");
+    nav("/page1");
   };
   const toP2 = () => {
-    navP2("/page2");
+    nav("/page2");
+  };
+  const toP3 = () => {
+    nav("/kanban-init");
+  };
+  const toP4 = () => {
+    nav("/kanban");
+  };
+  const toP5 = () => {
+    nav("/kanban-reduce");
   };
   return (
     <div>
@@ -37,6 +45,15 @@ function Home() {
       </button>
       <button type="button" className="btn btn-primary" onClick={toP2}>
         page2
+      </button>
+      <button type="button" className="btn btn-primary" onClick={toP3}>
+        kanban state
+      </button>
+      <button type="button" className="btn btn-primary" onClick={toP4}>
+        kanban effect
+      </button>
+      <button type="button" className="btn btn-primary" onClick={toP5}>
+        kanban reduce
       </button>
     </div>
   );

@@ -1,0 +1,27 @@
+.card {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+
+.badge {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+
+.high{
+   background-color: #FCEBEB; 
+   color: #A32D2D;
+}
+
+.medium{
+   background-color: #EEEDFE; 
+   color: #3C3489;
+}
+
+.low{
+   background-color: #E1F5EE; 
+   color: #085041;
+}
