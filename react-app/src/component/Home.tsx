@@ -15,11 +15,15 @@ function Home() {
   //we prepare the different redirections
   const navP1 = useNavigate();
   const navP2 = useNavigate();
+  const navP3 = useNavigate();
   const toP1 = () => {
     navP1("/page1");
   };
   const toP2 = () => {
     navP2("/page2");
+  };
+  const toP3 = () => {
+    navP2("/kanban");
   };
   return (
     <div>
@@ -37,6 +41,9 @@ function Home() {
       </button>
       <button type="button" className="btn btn-primary" onClick={toP2}>
         page2
+      </button>
+      <button type="button" className="btn btn-primary" onClick={toP3}>
+        kanban
       </button>
     </div>
   );
