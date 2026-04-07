@@ -29,6 +29,9 @@ function Home() {
   const toP5 = () => {
     nav("/kanban-reduce");
   };
+  const toP6 = () => {
+    nav("/kanban-http");
+  };
   return (
     <div>
       <ListGroup
@@ -54,6 +57,9 @@ function Home() {
       </button>
       <button type="button" className="btn btn-primary" onClick={toP5}>
         kanban reduce
+      </button>
+      <button type="button" className="btn btn-primary" onClick={toP6}>
+        kanban http
       </button>
     </div>
   );

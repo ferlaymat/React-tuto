@@ -1,5 +1,5 @@
-import { type Task } from "../shared/model/Types.ts";
-import TaskCard from "../taskcard/TaskCard";
+import { type Task } from "../../shared/model/Types.ts";
+import TaskCard from "../taskcard/TaskCard.tsx";
 
 interface Props {
   title: string;

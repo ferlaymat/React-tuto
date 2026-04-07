@@ -1,5 +1,5 @@
 import styles from "./TaskCard.module.css";
-import { type Task } from "../shared/model/Types.ts";
+import { type Task } from "../../shared/model/Types.ts";
 
 //define interface to allow communication with parent component
 interface Props {

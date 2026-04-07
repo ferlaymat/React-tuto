@@ -1,10 +1,10 @@
-import Column from "../column/Column.tsx";
 import { useNavigate } from "react-router-dom";
-import type { Task, Priority } from "../shared/model/Types.ts";
-import AddTaskForm from "../form/AddTaskForm.tsx";
-import { useState } from "react";
+import type { Task, Priority } from "../../shared/model/Types.ts";
+import AddTaskForm from "../../form/AddTaskForm.tsx";
+import UseLocalStorage from "../../shared/hooks/UseLocalStorage.ts";
+import Column from "../column/Column.tsx";
 
-function BoardInit() {
+function Board() {
   const columnList = ["To-do", "In progress", "Done"];
   let items: Task[] = [
     { id: 1, title: "Create structure", column: "Done", priority: "high" },
@@ -18,9 +18,9 @@ function BoardInit() {
     nav("/");
   };
 
-  //call useState to manage changes in the component
-  //states will be reset at each page reload
-  const [tasks, setTasks] = useState(items);
+  //call Hook which calls useState and useEffect
+  //states will be stored at each change the reload at the page rendering
+  const [tasks, setTasks] = UseLocalStorage("kanban-tasks", items);
 
   const addTask = (title: string, priority: Priority) => {
     setTasks((prev: Task[]) => [
@@ -81,4 +81,4 @@ function BoardInit() {
   );
 }
 
-export default BoardInit;
+export default Board;

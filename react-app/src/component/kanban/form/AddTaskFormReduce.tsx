@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./AddTaskForm.module.css";
 import type { Priority } from "../shared/model/Types";
-import { useBoardContext } from "../board/context/BoardContext";
+import { useBoardContext } from "../component/board/context/BoardContext";
 
 //we remove useless prop
 function AddTaskForm() {
@@ -17,7 +17,12 @@ function AddTaskForm() {
     //if no title, we do not continue
     if (!title.trim()) return;
     //else we call the handler to add the task
-    dispatch({ type: "ADD", title: title.trim(), priority: priority });
+    dispatch({
+      type: "ADD",
+      title: title.trim(),
+      priority: priority,
+      tempId: Date.now(),
+    });
     //then we reset default values for the form
     setTitle("");
     setPriority("medium");
