@@ -1,4 +1,4 @@
-import { type Task } from "../shared/model/Types.ts";
+import { type Task } from "../../shared/model/Types.ts";
 import TaskCardReduce from "../taskcard/TaskCardReduce.tsx";
 
 //we remove useless properties

@@ -1,10 +1,10 @@
-import ColumnReduce from "../column/ColumnReduce.tsx";
 import { useNavigate } from "react-router-dom";
-import type { Task } from "../shared/model/Types.ts";
-import AddTaskFormReduce from "../form/AddTaskFormReduce.tsx";
+import type { Task } from "../../shared/model/Types.ts";
+import AddTaskFormReduce from "../../form/AddTaskFormReduce.tsx";
 import { useEffect, useMemo, useReducer } from "react";
 import BoardReducer from "./reducer/BoardReducer.ts";
 import { BoardContext } from "./context/BoardContext.ts";
+import ColumnReduce from "../column/ColumnReduce.tsx";
 
 function BoardReduce() {
   const columnList = ["To-do", "In progress", "Done"];

@@ -1,5 +1,5 @@
 import { createContext, useContext, type Dispatch } from "react";
-import type { Action, Task } from "../../shared/model/Types";
+import type { Action, Task } from "../../../shared/model/Types";
 
 interface BoardContextType {
   tasks: Task[];
